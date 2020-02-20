@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let studentSchema = new Schema({
+let postSchema = new Schema({
   title: {
     type: String
   },
   content: {
     type: String
-  }, {
+  }
+}, {
     collection: 'posts'
   })
 
