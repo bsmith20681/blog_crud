@@ -3,9 +3,11 @@ let mongoose = require('mongoose');
 let cors = require('cors');
 let bodyParser = require('body-parser');
 let dbConfig = require('./database/db');
+require('dotenv').config()
 
 // Express Route
 const postRoute = require('../backend/routes/post.route')
+const authRoute = require('../backend/routes/auth.route')
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
@@ -25,7 +27,10 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cors());
+
+// routes middleware
 app.use('/posts', postRoute)
+app.use('/api', authRoute)
 
 
 // PORT
@@ -33,6 +38,7 @@ const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
   console.log('Connected to port ' + port)
 })
+
 
 // 404 Error
 app.use((req, res, next) => {

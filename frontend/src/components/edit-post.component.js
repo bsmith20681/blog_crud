@@ -67,7 +67,7 @@ export default class EditPost extends Component {
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1">Blog Post</label>
-            <textarea class="form-control" value={this.state.body} onChange={this.onChangePostBody} id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" value={this.state.body} onChange={this.onChangePostBody} id="exampleFormControlTextarea1" rows="10"></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Update Post</button>
         </form>
