@@ -15,7 +15,7 @@ function App() {
     <Router>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <Link class="navbar-brand" to={'/post-list'}>Navbar</Link>
+          <Link class="navbar-brand" to={'/'}>Navbar</Link>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -38,6 +38,7 @@ function App() {
           <div class="col-md-12">
             <Switch>
               <Route exact path="/" component={PostList}/>
+              <Route path="/post-list" component={PostList}/>
               <Route path="/create-post" component={CreatePost}/>
               <Route path="/edit-post/:id" component={EditPost}/>
               <Route path="/view-post/:id" component={ViewPost}/>
