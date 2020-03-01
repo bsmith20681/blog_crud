@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default class PostItem extends Component {
     render() {
         return (
             <div>
-              <h1><Link to={"/view-post/" + this.props.obj._id}>{this.props.obj.title}</Link></h1>
+              <Link href={"/view-post/" + this.props.obj._id}>
+                <a href="">{this.props.obj.title}</a>
+              </Link>
             </div>
         );
     }
