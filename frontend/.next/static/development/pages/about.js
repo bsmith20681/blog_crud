@@ -26069,7 +26069,7 @@ const Header = () => {
       lineNumber: 41
     },
     __self: undefined
-  }, "Sign I")))), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_3__["NavbarText"], {
+  }, "Sign In")))), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_3__["NavbarText"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 44

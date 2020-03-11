@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -4584,7 +4584,7 @@ const Header = () => {
       lineNumber: 41
     },
     __self: undefined
-  }, "Sign I")))), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_3__["NavbarText"], {
+  }, "Sign In")))), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_3__["NavbarText"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 44
@@ -4642,6 +4642,162 @@ const Layout = ({
 
 /***/ }),
 
+/***/ "./src/components/auth/SignupComponent.js":
+/*!************************************************!*\
+  !*** ./src/components/auth/SignupComponent.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "D:\\blog_crud\\frontend\\src\\components\\auth\\SignupComponent.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+const SignupComponent = () => {
+  const {
+    0: values,
+    1: setValues
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    name: '',
+    email: '',
+    password: '',
+    error: '',
+    loading: false,
+    message: '',
+    showForm: true
+  });
+  const {
+    name,
+    email,
+    password,
+    error,
+    loading,
+    message,
+    showForm
+  } = values;
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    console.log('handingl submit');
+  };
+
+  const handleChange = name => e => {
+    setValues(_objectSpread({}, values, {
+      error: false,
+      [name]: e.target.value
+    }));
+  };
+
+  const signupForm = () => {
+    return __jsx("div", {
+      class: "container",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: undefined
+    }, __jsx("form", {
+      onSubmit: handleSubmit,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: undefined
+    }, __jsx("div", {
+      className: "form-group",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: undefined
+    }, __jsx("input", {
+      value: name,
+      onChange: handleChange('name'),
+      type: "text",
+      className: "form-control",
+      placeholder: "Type your name",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-group",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: undefined
+    }, __jsx("input", {
+      value: email,
+      onChange: handleChange('email'),
+      type: "email",
+      className: "form-control",
+      placeholder: "Type your email",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "form-group",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: undefined
+    }, __jsx("input", {
+      value: password,
+      onChange: handleChange('password'),
+      type: "password",
+      className: "form-control",
+      placeholder: "Type your password",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: undefined
+    })), __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: undefined
+    }, __jsx("button", {
+      class: "btn btn-primary",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: undefined
+    }, "Sign Up"))));
+  };
+
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: undefined
+  }, signupForm());
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SignupComponent);
+
+/***/ }),
+
 /***/ "./src/config.js":
 /*!***********************!*\
   !*** ./src/config.js ***!
@@ -4664,10 +4820,10 @@ const APP_NAME = publicRuntimeConfig.APP_NAME;
 
 /***/ }),
 
-/***/ "./src/pages/index.js":
-/*!****************************!*\
-  !*** ./src/pages/index.js ***!
-  \****************************/
+/***/ "./src/pages/signup.js":
+/*!*****************************!*\
+  !*** ./src/pages/signup.js ***!
+  \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4676,42 +4832,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "D:\\blog_crud\\frontend\\src\\pages\\index.js";
+/* harmony import */ var _components_auth_SignupComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/auth/SignupComponent */ "./src/components/auth/SignupComponent.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "D:\\blog_crud\\frontend\\src\\pages\\signup.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Index = () => {
+
+const Signup = () => {
   return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 8
     },
     __self: undefined
-  }, __jsx("h2", {
+  }, __jsx(_components_auth_SignupComponent__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 9
     },
     __self: undefined
-  }, "Index Page"));
+  }));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+/* harmony default export */ __webpack_exports__["default"] = (Signup);
 
 /***/ }),
 
-/***/ 4:
-/*!**********************************!*\
-  !*** multi ./src/pages/index.js ***!
-  \**********************************/
+/***/ 5:
+/*!***********************************!*\
+  !*** multi ./src/pages/signup.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\blog_crud\frontend\src\pages\index.js */"./src/pages/index.js");
+module.exports = __webpack_require__(/*! D:\blog_crud\frontend\src\pages\signup.js */"./src/pages/signup.js");
 
 
 /***/ }),
@@ -4783,4 +4941,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=signup.js.map
