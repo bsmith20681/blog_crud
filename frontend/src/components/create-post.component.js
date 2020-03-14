@@ -37,7 +37,7 @@ export default class CreatePost extends Component {
 
     this.setState({title: '', body: ''})
 
-    this.props.history.push('/post-list')
+    this.props.history.push('/postlist')
   }
 
   render() {
